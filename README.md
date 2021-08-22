@@ -22,6 +22,11 @@ The automation test scripts include:
   * Inventory Item Details
     * User is able to access the Inventory Item Detail page
     * User is able to go back to inventory List page
+  * Global Menu
+    * User is able to open the global menu on all pages of the application
+    * User is able to close the global menu on all pages of the application
+    * User is able to navigate to the Inventory List page from the global menu
+    * User is able to logout from the global menu
 
 ---
 
@@ -37,7 +42,7 @@ Use the package manager `npm` to install dependencies:
 npm install
 ```
 
-Run the automation tests (Chrome & Firefox):
+Run the automation tests (Chrome):
 ```
 npm test
 ```
