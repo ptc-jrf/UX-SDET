@@ -45,6 +45,7 @@ describe('Global Menu', () => {
         await inventoryDetails.waitForIsShown()
 
         await globalMenu.openMenu();
+        await browser.pause(1000)
         await globalMenu.allItemsMenu();
 
         expect(await inventoryList.waitForIsShown(), 'Inventory Item List was not displayed').to.equal(true);
@@ -55,6 +56,7 @@ describe('Global Menu', () => {
     it('should validate that user is directed to the login page upon logout', async () => {
         await inventoryList.waitForIsShown()
         await globalMenu.openMenu();
+        await browser.pause(1000)
         await globalMenu.logout();
         expect(await loginPage.waitForIsShown(), 'User was not logged out').to.equal(true);
     });

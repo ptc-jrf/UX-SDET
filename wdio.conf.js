@@ -26,7 +26,7 @@ exports.config = {
 			//binary: '/mnt/c/Program Files (x86)/Google/Chrome/Application/',
             args: [
                 //'--user-data-dir=wdio',
-                //'--headless'
+                '--headless'
             ]
 		},
     }],
