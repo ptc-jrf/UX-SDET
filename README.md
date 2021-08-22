@@ -12,8 +12,16 @@ The automation test scripts include:
 * UI
   * Login
     * User is able to access the Login Page
+    * Page title is correct
     * User is able to login with registered credentials
     * User is unable to login with locked out credentials
+  * Inventory List
+    * User able to view all Inventory Items
+    * User is able to add an item to shopping cart
+    * User isa able remove an item from shopping cart
+  * Inventory Item Details
+    * User is able to access the Inventory Item Detail page
+    * User is able to go back to inventory List page
 
 ---
 

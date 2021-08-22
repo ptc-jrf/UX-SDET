@@ -1,8 +1,8 @@
 //const loginPage = require('../pageobjects/loginPage');
 import { expect } from 'chai';
-import loginPage from '../pageobjects/loginPage'
-import { LOGIN_USERS } from '../pageobjects/loginPage'
-import inventoryList from '../pageobjects/inventoryList'
+import loginPage from '../pageobjects/loginPage';
+import { LOGIN_USERS } from '../pageobjects/loginPage';
+import inventoryList from '../pageobjects/inventoryList';
 
 describe('Login Page', () => {
 
@@ -11,14 +11,17 @@ describe('Login Page', () => {
         await loginPage.waitForIsShown();
     });
 
+    //User is able to access the Login Page
     it('should be validate that the page has loaded', async () => {
         expect(await loginPage.waitForIsShown(), 'Page did not load').to.equal(true);
     });
 
+    //Page title is correct
     it('should validate page title', async () => {
         expect(await browser.getTitle(), 'Page Title is not Swag Labs').to.equal('Swag Labs')
     });
 
+    //User is able to login with registered credentials
     it('should be able to login with a valid user', async () => {
         const user= $("#user-name")
         const password= $("#password")
@@ -31,7 +34,8 @@ describe('Login Page', () => {
         expect(await inventoryList.waitForIsShown(), 'User was not logged in').to.equal(true);
 
     });
-
+    
+    //User is unable to login with locked out credentials
     it('should not be able to login with a locked out user', async () => {
         
         await loginPage.signIn(LOGIN_USERS.lockedout)
